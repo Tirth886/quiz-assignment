@@ -74,7 +74,7 @@ cd quiz-assignment
 Create a copy of the example environment file (if provided). For instance:
 
 ```bash
-cp .env.example .config/.env
+cp .env.example .env
 ```
 
 The `.env` file must include:
