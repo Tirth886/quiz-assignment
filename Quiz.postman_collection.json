@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "686ed3ef-8a9a-4458-8171-2c0613f8864c",
+		"name": "Quiz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30886339",
+		"_collection_link": "https://cloudy-astronaut-304224.postman.co/workspace/Netra-Workspace---TJ~a59fc165-8529-429c-8a57-d587e04ca4ed/collection/30886339-686ed3ef-8a9a-4458-8171-2c0613f8864c?action=share&source=collection_link&creator=30886339"
+	},
+	"item": [
+		{
+			"name": "Session Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tirth Jain\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Quiz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"JavaScript Basics\",\r\n  \"questions\": [\r\n    {\r\n      \"text\": \"What is the result of `typeof null` in JavaScript?\",\r\n      \"options\": [\"object\", \"null\", \"undefined\", \"number\"],\r\n      \"correct_option\": 0\r\n    },\r\n    {\r\n      \"text\": \"Which method converts a JSON string into a JavaScript object?\",\r\n      \"options\": [\"JSON.parse()\", \"JSON.stringify()\", \"JSON.convert()\", \"JSON.toObject()\"],\r\n      \"correct_option\": 0\r\n    },\r\n    {\r\n      \"text\": \"Which keyword declares a block-scoped variable in JavaScript?\",\r\n      \"options\": [\"var\", \"let\", \"const\", \"static\"],\r\n      \"correct_option\": 1\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/quiz/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"quiz",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Quizz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/quiz/:quizId/fetch",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"quiz",
+						":quizId",
+						"fetch"
+					],
+					"variable": [
+						{
+							"key": "quizId",
+							"value": "91f7d9fb-d27d-469c-811a-fb440e5f0593"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Question Feedback",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/quiz/:questionId/feedback?selected_option=0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"quiz",
+						":questionId",
+						"feedback"
+					],
+					"query": [
+						{
+							"key": "selected_option",
+							"value": "0"
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "questionId",
+							"value": "e5ff4288-d921-4d51-b38f-367070d3623a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quiz Result",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tirth Jain\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/quiz/:quizId/result",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"quiz",
+						":quizId",
+						"result"
+					],
+					"variable": [
+						{
+							"key": "quizId",
+							"value": "91f7d9fb-d27d-469c-811a-fb440e5f0593"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

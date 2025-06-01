@@ -1,0 +1,14 @@
+{
+  "compilerOptions" : {
+    "target" : "ESNext",
+    "module" : "ESNext",
+    "lib" : ["esnext"],
+    "moduleResolution" : "node",
+    "esModuleInterop" : true,
+    "resolveJsonModule" : true,
+    "outDir" : "dist",
+    "rootDir" : "./",
+    "strict" : true,
+    "skipLibCheck" : true
+  }
+}

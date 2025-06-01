@@ -1,0 +1,40 @@
+{
+  "name" : "quiz-assignment",
+  "version" : "1.0.0",
+  "description" : "",
+  "main" : "index.js",
+  "scripts" : {
+    "dev" : "nodemon --watch src --ext ts --exec \"ts-node --project tsconfig.json --esm src/bin/www.ts\"",
+    "build" : "tsc",
+    "test" : "npm run build && mocha 'dist/src/modules/**/*.test.js'",
+    "start" : "docker-compose up",
+    "lint:fix" : "eslint . --ext .ts --fix"
+  },
+  "type" : "module",
+  "keywords" : [],
+  "author" : "",
+  "license" : "ISC",
+  "devDependencies" : {
+    "@types/chai" : "^5.2.2",
+    "@types/dotenv-safe" : "^8.1.6",
+    "@types/express" : "^5.0.2",
+    "@types/mocha" : "^10.0.10",
+    "@types/node" : "^22.15.29",
+    "@types/uuid" : "^10.0.0",
+    "@typescript-eslint/eslint-plugin" : "^8.33.0",
+    "@typescript-eslint/parser" : "^8.33.0",
+    "chai" : "5.1.1",
+    "eslint" : "^8.57.1",
+    "eslint-plugin-jsonc" : "^2.20.1",
+    "mocha" : "10.7.0",
+    "nodemon" : "^3.1.10",
+    "ts-node" : "^10.9.2",
+    "typescript" : "^5.8.3"
+  },
+  "dependencies" : {
+    "dotenv-safe" : "^9.1.0",
+    "express" : "^5.1.0",
+    "uuid" : "^11.1.0",
+    "zod" : "^3.25.42"
+  }
+}
